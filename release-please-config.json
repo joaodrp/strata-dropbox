@@ -1,0 +1,16 @@
+{
+  "$schema": "https://raw.githubusercontent.com/googleapis/release-please/main/schemas/config.json",
+  "packages": {
+    ".": {
+      "release-type": "simple",
+      "extra-files": [
+        {
+          "type": "generic",
+          "path": "provider.py"
+        }
+      ],
+      "bump-minor-pre-major": true,
+      "initial-version": "0.1.0"
+    }
+  }
+}

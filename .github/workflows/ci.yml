@@ -1,0 +1,25 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4.4.0
+
+      - name: Provider tests
+        run: python3 -I -B -m unittest discover -s tests -v
+
+      - name: Installer test
+        run: tests/test_install.sh
+
+      - name: Shell lint
+        run: shellcheck install.sh tests/test_install.sh icons/render.sh
