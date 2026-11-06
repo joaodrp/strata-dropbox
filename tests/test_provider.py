@@ -327,8 +327,9 @@ class ProviderTest(unittest.TestCase):
 
     def test_a_replaced_file_is_refused(self):
         a = self.menu_action("browse")
-        os.unlink(self.file)
-        pathlib.Path(self.file).write_text("new file, same name")
+        new = self.file + ".new"  # both exist at once, so the inode differs
+        pathlib.Path(new).write_text("new file, same name")
+        os.replace(new, self.file)
         self.assertIn("changed", self.activate_action(a)["message"])
         self.assertNotIn("icon_overlay_context_action", [c for c, _ in self.dropbox.commands])
 
