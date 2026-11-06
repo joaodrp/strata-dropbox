@@ -22,7 +22,7 @@ import threading
 import time
 from urllib.parse import unquote
 
-__version__ = "0.0.0"  # x-release-please-version
+__version__ = "0.1.0"  # x-release-please-version
 
 MAX_FRAME = 1024 * 1024
 MAX_LINE = 64 * 1024  # one reply line from the Dropbox client
