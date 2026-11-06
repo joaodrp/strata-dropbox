@@ -12,7 +12,7 @@ Dropbox's own actions: copy a link, version history, and more.
 ## Highlights
 
 - ✅ A badge on every file and folder in your Dropbox: synced, syncing, can't sync, or excluded
-  from Dropbox sync. Problems outrank normal and syncing badges, from this or other providers.
+  from Dropbox sync. A sync error takes precedence over other providers' badges on the same file.
 - 🔄 Badges update by themselves when a sync finishes. No refreshing.
 - 🔗 Dropbox's own right-click menu: Copy link, Version history, View on Dropbox.com and View
   comments, as the Dropbox client offers them for what you selected.
